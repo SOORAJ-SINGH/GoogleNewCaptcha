@@ -1,17 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="GoogleRecaptcha.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RecaptchaNew.aspx.cs" Inherits="GoogleRecaptcha.RecaptchaNew" %>
 
-<%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Google Recaptcha</title>
-    
+    <title>New Recaptcha</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <form id="form1" runat="server">
+    <h2>New Recaptcha using the Google's API </h2>
         <div>
-        </div>
         <table>
             <tr>
                 <td></td>
@@ -32,15 +31,10 @@
             </tr>
             <tr>
                 <td>
-                    <recaptcha:RecaptchaControl
-                        ID="recaptcha"
-                        runat="server"
-                        PublicKey="6LeV7fwSAAAAACGlvCvX_cJzhsys5Ju_rW7Oqsn-"
-                        PrivateKey="6LeV7fwSAAAAACgQzjfZscePs-7d6kGx9A-RweGY" />
-
+                    
                 </td>
                 <td>
-                    
+                    <div class="g-recaptcha" data-sitekey="6LeDTAATAAAAAFSMYZSxiUFk9299NzBgGoh1hXLS"></div>
                 </td>
                 </tr><tr><td>
                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></td>
@@ -49,8 +43,8 @@
             </tr>
 
         </table>
-
-
+    
+    </div>
     </form>
 </body>
 </html>
